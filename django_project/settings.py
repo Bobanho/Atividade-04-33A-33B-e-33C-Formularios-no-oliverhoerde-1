@@ -137,3 +137,5 @@ STATICFILES_DIRS = [
     "automotiva_bonda/static",
     "automotica_bonda/static/Images"
 ]
+
+LOGIN_URL = '/users/login/'

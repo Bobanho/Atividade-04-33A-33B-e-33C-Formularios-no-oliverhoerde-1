@@ -1,0 +1,17 @@
+<h1>{{ type }} usuario</h1>
+
+<form method="POST">
+  {% csrf_token %}
+<div>
+  <label>Nome:</label>
+  <input name="username">
+</div>
+  <div>
+  <label>Senha:</label>
+  <input type="password" name="password">
+</div>
+
+  <input type="submit" value="Enviar">
+  <br>
+  <span style="color: red">{{ error_msg }}</span>
+</form>
