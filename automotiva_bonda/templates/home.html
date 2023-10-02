@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+
+<html>
+  
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Oliver Hoerde Napoles</title>
+  <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css" />
+</head>
+  
+<body>
+  <h1 style="border:1; color:pink; background-color: yellow;" class="lagosta_head">Lagostas e suas variações</h1>
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  <p>&nbspEsta página é um ode às lagostas</p>
+  <p>
+  &nbspEstavamos na praia, todos tinhamos toalhas mágicas. Alguém foi embaixo de uma doca e lá encontrou uma pedra, mas não era uma pedra, era uma <u><i><b>pedra-lagosta</b></i></u>!
+  <p>
+  &nbspAs pedra-lagostas são descendentes de lagotas refugiadas do iraq (as "Iraq-lagostas") e vivem majoritariamente de baixo da terra.
+  </p>
+
+  <div style="background-color: pink;"class="lagosta_style">
+    <div><img src="https://static.wikia.nocookie.net/dont-starve-game/images/c/ce/Rock_Lobster.png" width="100"></div>
+  </div>
+  <a href="https://music.youtube.com/watch?v=_WoruqZIZOg"target=_blank">&nbspAs Iraq-lagostas e a dança lagosta:</a>
+  <div class="lagosta_style"><img src="{% static 'automotiva_bonda/Images/lobster-dance.gif' %}" width="100"></div>
+  </div>
+
+<h2 class="lagosta_style">
+  Top lagostas:
+</h2>
+<!--
+  <ol>
+  <li>Pedra-Lagosta (GOAT)</li>
+  <img src="https://static.wikia.nocookie.net/dont-starve-game/images/c/ce/Rock_Lobster.png" width="100">
+  <li>Lagosta padrão (OG)</li>
+  <img src="{% static 'automotiva_bonda/Images/lagostaOG.jpg' %}" width="100">
+  <li>Blue lobster (the legend)</li>
+  <img src="{% static 'automotiva_bonda/Images/blue-lobster-618af4d323eb6.webp' %}" width="300" height="50">
+  <li>Larry a lagosta (gostoso)</li>
+  <img src="{% static 'automotiva_bonda/Images/Larrylagosta.jpg' %}" width="100">
+  <li>Iraq-lagosta (polêmico)</li>
+  <img src="{% static 'automotiva_bonda/Images/iraq-lobster.jpg' %}" width="100">
+</ol>
+  
+<ul>
+  <li>Lobster Tail</li>
+  <img src="{% static 'automotiva_bonda/Images/boiled-lobster-10.jpg' %}" width="100">
+  <li>Lagostina</li>
+  <img src="{% static 'automotiva_bonda/Images/lagostina.jpg' %}" width="100">
+</ul>
+-->
+<a href="/Brabas">Adicione sua Braba:</a>
+  
+<ol>
+  {% for braba in brabas %}
+    <li>{{ braba.title }} <a href="/Brabas/update/{{ braba.id }}"> Atualizar </a> <a href="/Brabas/Delete/{{ braba.id }}"> Remover </a> </li>
+  {% endfor %}
+</ol>
+
+<h2 class="lagosta_style">
+  Menções honrosas:
+</h2>
+
+
+<a href="/Author">Adicione sua menção:</a>
+
+
+
+  
+<ul>
+  {% for i in autor %}
+    <li>{{ i.title }} <a href="/Author/update/{{ i.id }}"> Atualizar </a> <a href="/Author/Delete/{{ i.id }}"> Remover </a></li>
+  {% endfor %}
+</ul>
+  
+  <table class="lagosta_style" border="1">  
+    </tr>
+      <td>Nome</td> 
+      <td>Genero</td>
+      <td>Valor</td>   
+    {% for tabela in tabelados %} 
+      <tr>
+        <td>{{tabela.title}}</td> 
+        <td>{{tabela.genero}}</td>
+        <td>{{tabela.preco}}</td>   
+      </tr>
+    {% endfor %}
+</table>
+
+
+</body>
+
+</html>

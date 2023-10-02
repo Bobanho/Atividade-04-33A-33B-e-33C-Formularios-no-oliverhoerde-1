@@ -1,0 +1,7 @@
+Você tem certeza que quer matar a Lagosta {{ item.title }}?
+
+<form method = "POST">
+  {% csrf_token %}
+  <input type="submit" name="sim" value="sim">
+  <input type="submit" name="nao" value="nao">
+</form>

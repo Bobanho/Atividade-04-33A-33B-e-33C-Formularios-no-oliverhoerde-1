@@ -1,0 +1,23 @@
+<h1>{{ type }} Lagosta</h1>
+
+<form method="POST">
+  {% csrf_token %}
+<div>
+  <label>Nome da Lagosta:</label>
+  <input name="title" value="{{ item.title }}">
+</div>
+<div>
+  <label>Gênero:</label>
+  <input id="gen" name="gen" value="{{ item.genero }}">
+</div>
+<div>
+  <label>Data de lançamento:</label>
+  <input type="date" name="data" value="{{ item.release_date }}">
+</div>
+<div>
+  <label>Afiliação partidária</label>
+  <input name="part" value="{{ item.afiliacao_partidaria }}">
+</div>
+  
+  <input type="submit" value="Enviar">
+</form>

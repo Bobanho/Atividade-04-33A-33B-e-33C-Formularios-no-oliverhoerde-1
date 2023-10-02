@@ -1,0 +1,15 @@
+<h1>{{ type }} Lagosta</h1>
+
+<form method="POST">
+  {% csrf_token %}
+<div>
+  <label>Nome da Lagosta:</label>
+  <input name="title" value="{{ item.title }}">
+</div>
+<div>
+  <label>Origem:</label>
+  <input name="origem" value="{{ item.origem }}">
+</div>
+
+  <input type="submit" value="Enviar">
+</form>
