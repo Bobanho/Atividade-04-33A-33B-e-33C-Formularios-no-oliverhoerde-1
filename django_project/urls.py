@@ -26,4 +26,4 @@ urlpatterns = [
   path('Author/update/<id>', views.update_Author,  name='up_Author'),
   path('Author/Delete/<id>', views.delete_Author,  name='del_Author'),
   path('admin/', admin.site.urls),
-
+]
